@@ -31,7 +31,7 @@ $page_controller = isset($page_controller) ? $page_controller : '';
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url(route_to('home'));?>"><?php echo lang('Client.kb.menu');?></a>
                 </li>
@@ -66,17 +66,6 @@ $page_controller = isset($page_controller) ? $page_controller : '';
 $this->renderSection('content');
 ?>
 
-
-<div id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">Copyright &copy; <?php echo site_config('site_name');?></div>
-            <div class="col-md-6 text-md-right">
-                Powered by <a href="http://www.helpdeskz.com">HelpDeskZ</a>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Javascript -->
 <?php
 echo script_tag('assets/components/jquery/jquery.min.js').

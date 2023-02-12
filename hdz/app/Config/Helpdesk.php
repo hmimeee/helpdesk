@@ -14,13 +14,13 @@ use CodeIgniter\Config\BaseConfig;
 class Helpdesk extends BaseConfig
 {
     #Database host
-    const DB_HOST = 'db';
+    const DB_HOST = 'localhost';
 
     #Database username
-    const DB_USER = 'helpdesk';
+    const DB_USER = 'imran';
 
     #Database password
-    const DB_PASSWORD = 'helpdesk';
+    const DB_PASSWORD = '@Imran123';
 
     #Database name
     const DB_NAME = 'helpdesk';
@@ -32,7 +32,7 @@ class Helpdesk extends BaseConfig
     const DB_PORT = 3306;
 
     #URL of your helpdesk
-    const SITE_URL = 'http://localhost';
+    const SITE_URL = 'http://helpdesk.test';
 
     #Upload path for images used in HTML editor and logo
     const UPLOAD_PATH = FCPATH.'upload';

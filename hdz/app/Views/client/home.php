@@ -12,7 +12,7 @@ $this->section('content');
         <div class="slider-content">
             <div class="container">
                 <?php echo form_open(route_to('search'),['method'=>'get']);?>
-                <h1><?php echo lang('Client.kb.howCanWeHelpYou');?></h1>
+                <h1 class="section-title"><?php echo lang('Client.kb.howCanWeHelpYou');?></h1>
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="input-group input-group-lg">
@@ -29,7 +29,8 @@ $this->section('content');
     </div>
     <div class="container mt-5">
         <?php if($category_id == 0):?>
-            <h1 class="heading mb-4"><?php echo lang('Client.kb.title');?></h1>
+            <h4 class="text-center text-secondary mb-0"><?= lang('Client.kb.headline') ?></h4>
+            <h1 class="section-title text-center mb-4"><?php echo lang('Client.kb.title');?></h1>
         <?php else:?>
             <div class="mb-5">
                 <a class="inactive_link" href="<?php echo site_url();?>"><?php echo lang('Client.kb.title');?> &nbsp; /</a>

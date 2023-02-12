@@ -3,9 +3,10 @@
 // override core en language system validation or define your own en language validation message
 return [
     'kb' => [
-        'title' => 'Knowledge Base',
+        'title' => '<span class="text-dark">Knowledge</span> Base',
+        'headline' => 'Latest Info',
         'menu' => 'Knowledge base',
-        'howCanWeHelpYou' => 'How can we help you?',
+        'howCanWeHelpYou' => '<span class="text-dark">How</span> can we help you?',
         'search' => 'Search in knowledge base',
         'moreTopics' => 'More Topics',
         'mostPopular' => 'Most popular articles',
