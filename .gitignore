@@ -1,3 +1,10 @@
-.docker/mysql/*
-hdz/writable/*
+hdz/writable/attachments/*
+hdz/writable/cache/*
+hdz/writable/debugbar/*
+hdz/writable/logs/*
+hdz/writable/mails/*
+hdz/writable/session/*
+hdz/writable/uploads/*
 upload/*
+upload/thumbs/*
+!upload/thumbs

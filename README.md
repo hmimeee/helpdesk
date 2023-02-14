@@ -18,6 +18,19 @@ HelpDeskZ requires:
 - ext-imap
 - ext-mbstring
 
+## Docker Installation steps
+
+Run the following command to build and up conatiners of the project:
+```bash
+docker-compose up
+```
+
+Run the following command to import the database:
+
+```bash
+docker exec -i helpdesk-db mysql -uhelpdesk -phelpdesk helpdesk < hdz/install/db.sql
+```
+
 ## Installation steps
 
 - Connect with FTP to the <em>public folder</em> of your server where the rest of your Web site is
