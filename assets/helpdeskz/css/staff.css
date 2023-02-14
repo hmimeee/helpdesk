@@ -1,6 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-size: .875rem;
+    font-family: Poppins,sans-serif !important;
+    background: #fff;
+}
+small, .small {
+    font-size: 13px;
+}
 .pointer{
     cursor: pointer;
 }
 .bg-staff{
     background-color: #FFF5E5;
+}
+.nav-link {
+    font-size: .875rem;
+    font-family: Poppins,sans-serif !important;
+}
+.main-sidebar .nav .nav-item .nav-link {
+    border: 0;
+}
+.main-sidebar .nav-wrapper {
+    margin-top: 1rem;
+}
+.main-sidebar .nav .nav-item, .main-sidebar .nav .nav-link {
+    font-size: 1rem;
+}
+.main-sidebar {
+    box-shadow: none;
+}
+.card {
+    box-shadow: none;
+}
+.main-content > .main-navbar, .main-content .header-navbar {
+    box-shadow: none;
+}
+.main-navbar .navbar {
+    border-bottom: 0 !important;
+}
+.page-header > div {
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+.main-sidebar .nav .nav-item {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+.main-sidebar .nav .nav-item .nav-link {
+    color: #111827;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.main-sidebar .nav .nav-item .nav-link i {
+    color: rgb(107,114,128);
+}
+.main-sidebar .nav .nav-item .nav-link:hover {
+    background-color: rgb(243,244,246);
+    box-shadow: none;
+}
+.main-sidebar .nav .nav-item .nav-link.active {
+    background-color: rgb(243,244,246);
+    box-shadow: inset 0.3rem 0 0 #d1d3d6;
+    padding: 0.5rem;
+    color: #111827;
+    border-radius: 0;
+}
+.main-sidebar .nav .nav-item:hover {
+    border: none;
+    box-shadow: none;
+}
+.main-sidebar .nav .nav-item .nav-link:hover {
+    background-color: rgb(243,244,246);
+    color: #111827;
+}
+.main-sidebar .dropdown-menu .dropdown-item {
+    font-size: 1rem;
+    font-family: Poppins,sans-serif !important;
+}
+.main-sidebar .dropdown-menu .dropdown-item:hover {
+    background-color: rgb(243,244,246);
+}
+.text-primary {
+    color: #0d2352 !important;
+}
+a.text-primary:hover, a.text-primary:focus {
+    color: #0d2352 !important;
+}
+.main-sidebar {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 1rem;
 }

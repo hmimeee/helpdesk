@@ -158,19 +158,19 @@
                     <ul class="navbar-nav border-left flex-row ">
                         <li class="nav-item border-right">
                             <div class="text-nowrap px-3 pt-3">
-                                <a href="<?php echo site_url(route_to('staff_ticket_new'));?>" class="btn btn-light btn-sm">
+                                <a href="<?php echo site_url(route_to('staff_ticket_new'));?>" class="btn btn-primary btn-sm">
                                     <i class="fa fa-edit"></i> <?php echo lang('Admin.tickets.newTicket');?>
                                 </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-nowrap px-3 text-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <img class="user-avatar rounded-circle mr-2" src="<?php echo staff_avatar(staff_data('avatar'));?>" alt="User Avatar">
                                 <span class="d-none d-md-inline-block"><?php echo staff_data('fullname');?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-small">
-                                <a class="dropdown-item" href="<?php echo site_url(route_to('staff_profile'));?>">
+                                <a class="dropdown-item text-primary" href="<?php echo site_url(route_to('staff_profile'));?>">
                                     <i class="fas fa-user-cog"></i> <?php echo lang('Admin.account.profile');?></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="<?php echo site_url(route_to('staff_logout'));?>">
