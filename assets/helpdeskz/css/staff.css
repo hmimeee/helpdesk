@@ -92,16 +92,3 @@ a.text-primary:hover, a.text-primary:focus {
     padding-right: 0.75rem;
     padding-bottom: 1rem;
 }
-.btn {
-    font-size: .875rem;
-}
-.btn-secondary {
-    background: #fff;
-    border: 2px solid #0d2352;
-    color: #0d2352;
-}
-.btn-secondary:hover {
-    background: #fff;
-    border: 2px solid #0d2352;
-    color: #0d2352;
-}

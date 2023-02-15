@@ -1,7 +1,2 @@
-hdz/writable/attachments/*
-hdz/writable/cache/*
-hdz/writable/debugbar/*
-hdz/writable/logs/*
-hdz/writable/mails/*
-hdz/writable/session/*
-hdz/writable/uploads/*
+hdz/writable/*
+uploads/*
