@@ -161,6 +161,7 @@ a.kb_category:hover {
   transform: scaleX(1.05) scaleY(1.05);
   border-color: #0d2352;
   background-color: #0d2352;
+  transition: all 0.2s;
 }
 .section-title {
     font-family: Poppins,sans-serif;
@@ -190,4 +191,5 @@ a.kb_category:hover {
   background: #fff;
   border: 2px solid #0d2352;
   color: #0d2352;
+  transition: all 0.2s;
 }
