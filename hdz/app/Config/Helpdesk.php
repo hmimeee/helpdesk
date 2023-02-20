@@ -14,7 +14,7 @@ use CodeIgniter\Config\BaseConfig;
 class Helpdesk extends BaseConfig
 {
     #Database host
-    const DB_HOST = 'db';
+    const DB_HOST = 'helpdesk-db';
 
     #Database username
     const DB_USER = 'helpdesk';
