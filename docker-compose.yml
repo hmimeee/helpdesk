@@ -18,19 +18,19 @@ services:
   db:
     build:
       args:
-        user: helpdesk
-        database: helpdesk
-        password: helpdesk
+        user: ${MYSQL_USER}
+        database: ${MYSQL_DATABASE}
+        password: ${MYSQL_PASSWORD}
       context: ./
       dockerfile: ./.docker/mysql/Dockerfile
     image: mysql:latest
     container_name: helpdesk-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: helpdesk
-      MYSQL_ROOT_PASSWORD: helpdesk
-      MYSQL_PASSWORD: helpdesk
-      MYSQL_USER: helpdesk
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     ports:

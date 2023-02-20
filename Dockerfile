@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl
 
 # Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+# RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
 RUN docker-php-ext-install mbstring intl imap fileinfo iconv mysqli
