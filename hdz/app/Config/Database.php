@@ -91,13 +91,12 @@ class Database extends Config
             $this->defaultGroup = 'tests';
         }
 
-
-		$this->default['hostname'] = Helpdesk::DB_HOST;
-		$this->default['username'] = Helpdesk::DB_USER;
-		$this->default['password'] = Helpdesk::DB_PASSWORD;
-        $this->default['database'] = Helpdesk::DB_NAME;
-        $this->default['DBPrefix'] = Helpdesk::DB_PREFIX;
-        $this->default['port'] = Helpdesk::DB_PORT;
+		$this->default['hostname'] = $_ENV['MYSQL_HOST'] ?? Helpdesk::DB_HOST;
+		$this->default['username'] = $_ENV['MYSQL_USER'] ?? Helpdesk::DB_USER;
+		$this->default['password'] = $_ENV['MYSQL_PASSWORD'] ?? Helpdesk::DB_PASSWORD;
+        $this->default['database'] = $_ENV['MYSQL_DATABASE'] ?? Helpdesk::DB_NAME;
+        $this->default['DBPrefix'] = $_ENV['MYSQL_DB_PREFIX'] ?? Helpdesk::DB_PREFIX;
+        $this->default['port'] = $_ENV['MYSQL_PORT'] ?? Helpdesk::DB_PORT;
 	}
 
 	//--------------------------------------------------------------------

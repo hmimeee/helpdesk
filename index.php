@@ -11,8 +11,6 @@ unset($minPHPVersion);
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 define('HDZ_PATH', FCPATH.'hdz'.DIRECTORY_SEPARATOR);
 define('HDZ_VERSION', '2.0.2');
-defined('ENVIRONMENT')      || define('ENVIRONMENT', 'development'); // highest automatically-assigned error code
-
 
 /*
  *---------------------------------------------------------------

@@ -445,4 +445,9 @@ class App extends Helpdesk
      * @var boolean
      */
     public $CSPEnabled = false;
+
+    public function __construct()
+    {
+        $this->baseURL = $_ENV['SITE_URL'] ?? self::SITE_URL;
+    }
 }

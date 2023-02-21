@@ -503,7 +503,11 @@ class CodeIgniter
 		if (! defined('ENVIRONMENT'))
 		{
 			// running under Continuous Integration server?
-			if (getenv('CI') !== false)
+			if(isset($_ENV['ENV']))
+			{
+				define('ENVIRONMENT', $_ENV['ENV']);
+			}
+			else if (getenv('CI') !== false)
 			{
 				define('ENVIRONMENT', 'testing');
 			}
