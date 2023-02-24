@@ -1,29 +1,17 @@
 services:
   app:
     build:
-      args:
-        user: helpdesk
-        uid: 1000
-      context: ./
       dockerfile: Dockerfile
     image: helpdesk
     container_name: helpdesk-app
     restart: unless-stopped
-    working_dir: /var/www/
     volumes:
-      - ./:/var/www
+      - app:/var/www
     networks:
       - helpdesk
 
   db:
-    build:
-      args:
-        user: ${MYSQL_USER}
-        database: ${MYSQL_DATABASE}
-        password: ${MYSQL_PASSWORD}
-      context: ./
-      dockerfile: ./.docker/mysql/Dockerfile
-    image: mysql:latest
+    image: mariadb:latest
     container_name: helpdesk-db
     restart: unless-stopped
     environment:
@@ -31,10 +19,8 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    ports:
-      - 33061:3306
+    volumes:
+    - ./hdz/install/db.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
       - helpdesk
 
@@ -45,7 +31,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./:/var/www
+      - app:/var/www
       - ./.docker/nginx:/etc/nginx/conf.d/
     networks:
       - helpdesk
@@ -53,3 +39,6 @@ services:
 networks:
   helpdesk:
     driver: bridge
+
+volumes:
+  app:

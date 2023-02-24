@@ -1,10 +1,10 @@
 FROM php:7.4-fpm
 
+# Copying project files to the container
 COPY . /var/www
 
-# Arguments defined in docker-compose.yml
-ARG user
-ARG uid
+# Set the user to root
+USER root
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,21 +21,13 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl
 
 # Clear cache
-# RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
 RUN docker-php-ext-install mbstring intl imap fileinfo iconv mysqli
 
-# Get latest Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Create system user to run Composer and Artisan Commands
-RUN useradd -G www-data,root -u $uid -d /home/$user $user
-RUN mkdir -p /home/$user/.composer && \
-    chown -R $user:$user /home/$user
+# Making the owner of the path to have access
 RUN chown -R www-data:root /var/www
 
 # Set working directory
 WORKDIR /var/www
-
-USER $user
