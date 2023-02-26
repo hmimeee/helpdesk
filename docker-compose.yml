@@ -6,6 +6,8 @@ services:
     #image: helpdesk
     container_name: helpdesk-app
     restart: unless-stopped
+    env_file:
+      - .env
     #environment:
     #  - SITE_URL=http://localhost
     #ports:
@@ -19,11 +21,13 @@ services:
     image: mariadb:latest
     container_name: helpdesk-db
     restart: unless-stopped
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
+    env_file:
+      - .env
+    # environment:
+    #   MYSQL_DATABASE: ${MYSQL_DATABASE}
+    #   MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    #   MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    #   MYSQL_USER: ${MYSQL_USER}
     volumes:
     - ./db.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
