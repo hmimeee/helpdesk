@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install mbstring intl imap fileinfo iconv mysqli
+RUN docker-php-ext-install mbstring intl imap fileinfo iconv mysqli gd
 
 # Making the owner of the path to have access
 RUN chown -R www-data:root /var/www
